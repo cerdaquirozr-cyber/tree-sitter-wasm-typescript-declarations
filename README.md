@@ -1,22 +1,19 @@
 # tree-sitter-wasm-typescript-bindings
-"TypeScript declarations (.d.ts) for Tree-sitter WebAssembly module compiled with Emscripten. Bindings automáticos para usar el parser en browser/Node.js"
-# Tree-sitter WASM TypeScript Bindings
 
-Declaraciones TypeScript para el módulo WebAssembly de **Tree-sitter** generado vía Emscripten.
+TypeScript declarations (.d.ts) for Tree-sitter WebAssembly module compiled with Emscripten. Automatic bindings to use the parser in browser/Node.js.
 
 ## ¿Qué es?
 
 Bindings de bajo nivel para interactuar con el core de Tree-sitter en WebAssembly.
 
-**Nota:** Para la mayoría de los casos usa el paquete oficial [`web-tree-sitter`](https://www.npmjs.com/package/web-tree-sitter) que ya trae tipos más amigables.
+**Nota importante:** Para la mayoría de los casos, usa el paquete oficial [`web-tree-sitter`](https://www.npmjs.com/package/web-tree-sitter). Trae tipos más amigables, mejor documentación y ya está listo para usar en proyectos reales.
+
+Este repo es útil si estás compilando tu propio Tree-sitter WASM custom o necesitas los bindings crudos autogenerados por Emscripten.
 
 ## Instalación
 
+Si publicas este paquete en npm (recomendado), instala así:
+
 ```bash
-npm install tu-usuario/tree-sitter-wasm-typescript-bindings
-
-import MainModuleFactory from 'tree-sitter-wasm-typescript-bindings';
-
-const module = await MainModuleFactory();
-const parserPtr = module._ts_parser_new_wasm();
-// ... etc
+npm install @cerdaqu/tree-sitter-wasm-typescript-bindings
+# o si no lo publicaste aún: npm install github:cerdaqu/tree-sitter-wasm-typescript-bindings
